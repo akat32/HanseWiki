@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import './.scss'
+import './guideline.scss'
 
-interface bbProps {
+interface GuidelineProps {
     index: Object
 }
 
@@ -14,15 +14,15 @@ let list = [
 ]
 
 
-export const aa = ()=> {
+export const Guideline = ()=> {
     return (
-        <ul className = "">
-            { list.map ( i => <BB index = { i.index }/>)}
+        <ul className = "guideline">
+            { list.map ( i => <GuidelineLi index = { i.index }/>)}
         </ul>
     )
 }
 
-const BB = (props:bbProps)=> {
+const GuidelineLi = (props:GuidelineProps)=> {
     return (
         <li className = "innerLi">
             {props.index}

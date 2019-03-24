@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import './.scss'
+import './chat.scss'
 
-interface bbProps {
+interface ChatProps {
     index: Object
 }
 
@@ -14,15 +14,15 @@ let list = [
 ]
 
 
-export const aa = ()=> {
+export const Chat = ()=> {
     return (
-        <ul className = "">
-            { list.map ( i => <BB index = { i.index }/>)}
+        <ul className = "chat">
+            { list.map ( i => <ChatLi index = { i.index }/>)}
         </ul>
     )
 }
 
-const BB = (props:bbProps)=> {
+const ChatLi = (props:ChatProps)=> {
     return (
         <li className = "innerLi">
             {props.index}

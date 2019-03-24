@@ -4,6 +4,14 @@ import Hanse from '../../../assets/hanse.jpg'
 
 import { Notice } from './notice/notice'
 import { Characteristic } from './characteristic/characteristic'
+import { Chat } from './chat/chat'
+import { Club } from './club/club'
+import { Councli } from './Council/Council'
+import { Department } from './department/department'
+import { Game } from './game/game'
+import { Guideline } from './guideline/guideline'
+import { Incident } from './Incident/incident'
+import { Inpra } from './inpra/inpra'
 
 export const BigDoor = ()=> {
     return (
@@ -110,11 +118,13 @@ export const BigDoor = ()=> {
                     <span className = "title">위키 이용자를 위한 지침</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Guideline/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">학과</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Department/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">교가</span>
@@ -125,6 +135,7 @@ export const BigDoor = ()=> {
                     <span className = "title">인프라</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Inpra/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">프로젝트</span>
@@ -135,6 +146,7 @@ export const BigDoor = ()=> {
                     <span className = "title">사건</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Incident/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">부서</span>
@@ -150,11 +162,13 @@ export const BigDoor = ()=> {
                     <span className = "title">동아리</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Club/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">학생회</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Councli/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">학생 특성 분류</span>
@@ -165,11 +179,18 @@ export const BigDoor = ()=> {
                     <span className = "title">게임</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Game/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">기타</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                </div>
+                <div className = "contentListDiv">
+                    <span className = "title">채팅방</span>
+                    <span className = "edit"> [<a>편집</a>]</span>
+                    <hr/>
+                    <Chat/>
                 </div>
             </div>
         </div>
