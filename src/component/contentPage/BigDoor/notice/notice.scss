@@ -1,0 +1,24 @@
+.innerNotice {
+    a:visited {
+        color: #0b0080;
+    }
+    a {
+        text-decoration: none;
+        color: #0645ad;
+        background: none;
+    }
+    a:hover{
+        color: #0645ad;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    margin: 0;
+    padding-left: 1em;
+    margin-left: 0.7em;
+    .innerLi {
+        font-size: 0.9em;
+        margin-bottom: 0.3em;
+        span {
+        }
+    }
+}
