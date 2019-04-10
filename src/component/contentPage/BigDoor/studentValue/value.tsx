@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import './.scss'
+import './value.scss'
 
-interface bbProps {
+interface ValueProps {
     index: Object
 }
 
@@ -14,15 +14,15 @@ let list = [
 ]
 
 
-export const aa = ()=> {
+export const Value = ()=> {
     return (
-        <ul className = "">
-            { list.map ( i => <BB index = { i.index }/>)}
+        <ul className = "value">
+            { list.map ( i => <ValueLi index = { i.index }/>)}
         </ul>
     )
 }
 
-const BB = (props:bbProps)=> {
+const ValueLi = (props:ValueProps)=> {
     return (
         <li className = "innerLi">
             {props.index}

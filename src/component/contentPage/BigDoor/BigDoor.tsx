@@ -12,6 +12,12 @@ import { Game } from './game/game'
 import { Guideline } from './guideline/guideline'
 import { Incident } from './Incident/incident'
 import { Inpra } from './inpra/inpra'
+import { Other } from './Other/other'
+import { Person } from './person/person'
+import { Project } from './project/project'
+import { Schooldepartment } from './schooldepartment/schooldepartment'
+import { Schoolsong } from './schoolsong/schoolsong'
+import { Value } from './studentValue/value'
 
 export const BigDoor = ()=> {
     return (
@@ -124,12 +130,13 @@ export const BigDoor = ()=> {
                     <span className = "title">학과</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
-                    <Department/>
+                    <Schooldepartment/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">교가</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Schoolsong/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">인프라</span>
@@ -141,6 +148,7 @@ export const BigDoor = ()=> {
                     <span className = "title">프로젝트</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Project/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">사건</span>
@@ -152,11 +160,13 @@ export const BigDoor = ()=> {
                     <span className = "title">부서</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Department/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">인물</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Person/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">동아리</span>
@@ -174,6 +184,7 @@ export const BigDoor = ()=> {
                     <span className = "title">학생 특성 분류</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Value/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">게임</span>
@@ -185,6 +196,7 @@ export const BigDoor = ()=> {
                     <span className = "title">기타</span>
                     <span className = "edit"> [<a>편집</a>]</span>
                     <hr/>
+                    <Other/>
                 </div>
                 <div className = "contentListDiv">
                     <span className = "title">채팅방</span>
