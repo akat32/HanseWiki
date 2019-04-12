@@ -2,6 +2,8 @@ import React, { Component, useState, useEffect } from 'react'
 import './bar.scss'
 import Logo from '../../assets/logo.png'
 
+import axios from 'axios'
+
 let title = "한세위키 : 대문"
 
 export const TopBar = ()=> {
@@ -11,6 +13,14 @@ export const TopBar = ()=> {
         if ( menuDisplay === "none") setDisplay("block")
         else setDisplay("none")
     }
+    useEffect(() => {
+        let json = {
+            isLogined: false,
+            id: "Please login!",
+            sign: "로그인"
+        }
+        SetMenu(json)
+    })
     return (
         <div className = "topBar">
             <div className = "logo">
@@ -32,7 +42,16 @@ export const TopBar = ()=> {
                 </div>
                 <div className = "userMenu" style = {{display: menuDisplay}}>
                     <div className = "triangle"></div>
-                    <div className = "menu"></div>
+                    <div className = "menu">
+                        <div className = "logined">
+                        </div>
+                        <div className = "fix">
+                            내 정보 수정
+                        </div>
+                        <div className = "sign">
+                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
