@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import './bar.scss'
 import Logo from '../../assets/logo.png'
 
 let title = "한세위키 : 대문"
 
 export const TopBar = ()=> {
+    const [userMenu, SetMenu] = useState()
+    const [menuDisplay, setDisplay] = useState("none")
+    function display () {
+        if ( menuDisplay === "none") setDisplay("block")
+        else setDisplay("none")
+    }
     return (
         <div className = "topBar">
             <div className = "logo">
@@ -22,9 +28,12 @@ export const TopBar = ()=> {
                     </button>
                 </div>
                 <div>
-                    <div className = "userBtn"></div>
+                    <div className = "userBtn" onClick = {display}></div>
                 </div>
-                <div className = "userMenu"></div>
+                <div className = "userMenu" style = {{display: menuDisplay}}>
+                    <div className = "triangle"></div>
+                    <div className = "menu"></div>
+                </div>
             </div>
         </div>
     )
