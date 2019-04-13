@@ -2,26 +2,37 @@ import React, { Component, useState, useEffect } from 'react'
 import './bar.scss'
 import Logo from '../../assets/logo.png'
 
+import api from '../../api.json'
+
 import axios from 'axios'
 
 let title = "한세위키 : 대문"
 
 export const TopBar = ()=> {
     const [userID, SetID] = useState()
+    const [isLogined, setLogined] = useState()
     const [userSign, SetSign] = useState()
     const [menuDisplay, setDisplay] = useState("none")
     function display () {
         if ( menuDisplay === "none") setDisplay("block")
         else setDisplay("none")
     }
-    useEffect(() => {
-        let json = {
-            isLogined: false,
-            id: "Please login!",
-            sign: "로그인"
+    async function loadUser () {
+        let url = api.url + 'isauth'
+        try {
+            let result = await axios.get(url);
+            SetID(result.data.user.name)
+            SetSign("로그아웃")
+            setLogined(true)
         }
-        SetID(json.id)
-        SetSign(json.sign)
+        catch (e) {
+            SetID("Please login!")
+            SetSign("로그인")
+            setLogined(false)
+        }
+    }
+    useEffect(() => {
+        loadUser()
     })
     return (
         <div className = "topBar">
