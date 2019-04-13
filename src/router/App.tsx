@@ -4,16 +4,12 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import { Main, Signin, Signup } from '../component/index'
 
+import { Content } from '../component/content/content'
+
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <Route exact path = "/" component = {Main}/>
-          <Route exact path = "/signin" component = {Signin}/>
-          <Route exact path = "/signup" component = {Signup}/>
-        </div>
-      </Router>
+      <Main/>
     );
   }
 }
