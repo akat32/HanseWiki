@@ -7,7 +7,8 @@ import axios from 'axios'
 let title = "한세위키 : 대문"
 
 export const TopBar = ()=> {
-    const [userMenu, SetMenu] = useState()
+    const [userID, SetID] = useState()
+    const [userSign, SetSign] = useState()
     const [menuDisplay, setDisplay] = useState("none")
     function display () {
         if ( menuDisplay === "none") setDisplay("block")
@@ -19,7 +20,8 @@ export const TopBar = ()=> {
             id: "Please login!",
             sign: "로그인"
         }
-        SetMenu(json)
+        SetID(json.id)
+        SetSign(json.sign)
     })
     return (
         <div className = "topBar">
@@ -42,14 +44,16 @@ export const TopBar = ()=> {
                 </div>
                 <div className = "userMenu" style = {{display: menuDisplay}}>
                     <div className = "triangle"></div>
+                    <div className  = "tri"></div>
                     <div className = "menu">
                         <div className = "logined">
+                            {userID}
                         </div>
                         <div className = "fix">
                             내 정보 수정
                         </div>
                         <div className = "sign">
-                        
+                            {userSign}
                         </div>
                     </div>
                 </div>
