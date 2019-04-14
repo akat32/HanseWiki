@@ -22,6 +22,8 @@ import { Value } from './studentValue/value'
 export const BigDoor = ()=> {
     return (
         <div className = "BigDoor">
+            <p className = "contentTitle">대문</p>
+            <hr className = "hr"/>
             <div className = "welcome">
                 <hr/>
                 <p className = "welcomeP"><span className = "fontC">한세위키 </span>방문을 환영합니다!</p>

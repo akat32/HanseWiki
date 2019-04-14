@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter as Router, Route} from "react-router-dom";
-
-import { Main, Signin, Signup } from '../component/index'
-
-import { Content } from '../component/content/content'
+import { Main } from '../component/index'
 
 class App extends Component {
   render() {
