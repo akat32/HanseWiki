@@ -1,5 +1,6 @@
 .signup {
     .inputForm {
+        float: left;
         margin-top: 1.5em;
         input {
             padding-left: 0.7em;
@@ -16,5 +17,13 @@
             font-size: 1.05em;
             font-weight: 400;
         }
+    }
+    .precautions {
+        float: left;
+        margin-top: 3em;
+        width: 20em;
+        height: 26em;
+        background-color: #000;
+        margin-left: 20%;
     }
 }

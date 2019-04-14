@@ -22,6 +22,12 @@ export const Signup = ()=> {
                 <p>실명</p>
                 <input type = "text" placeholder = "실제 이름을 입력하세요"/>
             </div>
+            <div className = "precautions">
+
+            </div>
+            <div className = "chkPerson">
+
+            </div>
         </div>
     )
 }
