@@ -17,13 +17,21 @@
             font-size: 1.05em;
             font-weight: 400;
         }
+        .accept {
+            background-color: #CDDB28;
+            width: 23em;
+            height: 2.2em;
+            border: 0;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 1.7em;
+        }
     }
     .precautions {
-        float: left;
         margin-top: 3em;
-        width: 20em;
+        width: 40em;
         height: 26em;
-        background-color: #000;
         margin-left: 20%;
     }
 }
