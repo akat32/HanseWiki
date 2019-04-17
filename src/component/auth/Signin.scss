@@ -1,0 +1,31 @@
+.signin {
+    .inputForm {
+        margin-top: 1.5em;
+        p {
+            font-size: 1.05em;
+            font-weight: 400;
+        }
+        ::placeholder {
+            font-style: oblique;
+        }
+        input {
+            padding-left: 0.7em;
+            height: 2.2em;
+            width: 22em;
+            margin-top: 0.3em;
+            margin-bottom: 1.7em;
+            font-size: 1em;
+        }
+        .accept {
+            background-color: #CDDB28;
+            width: 23em;
+            height: 2.2em;
+            border: 0;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 0.5em;
+            margin-bottom: 1.7em;
+        }
+    }
+}

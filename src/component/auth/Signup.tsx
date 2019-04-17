@@ -16,7 +16,7 @@ export const Signup = ()=> {
                 <p>비밀번호</p>
                 <input type = "password" placeholder="비밀번호를 입력하세요"/>
                 <p>비밀번호 재입력</p>
-                <input type = "password" placeholder="비밀번호를 입력하세요"/>
+                <input type = "password" placeholder="비밀번호를 재입력하세요"/>
                 <p>닉네임</p>
                 <input type = "text" placeholder = "닉네임을 입력하세요"/>
                 <p>실명</p>
