@@ -45,9 +45,11 @@ export const TopBar = ()=> {
     })
     return (
         <div className = "topBar">
+            <a href = "/">
             <div className = "logo">
                 <img className="logoImg" src={Logo}/>
             </div>
+            </a>
             <div className = "innerTap">
                 <span className = "title">{title}</span>
                 <div className = "searchDiv">
