@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import { TopBar } from '../topBar/bar'
 import { Content } from '../content/content'
+import { TopBar } from '../topBar/bar'
 
 export const Main = ()=> {
     return (

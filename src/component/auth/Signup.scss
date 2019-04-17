@@ -39,7 +39,7 @@
             height: 5em;
             margin-top: 1.5em;
             margin-bottom: 1.5em;
-            padding-left: 10em;
+            padding-left: calc(5em + 20%);
         }
         .Admin {
             background-image: url('../../assets/admin-with-cogwheels.png');
@@ -67,6 +67,17 @@
         .ppp {
             opacity: 0.6;
             text-align: center;
+        }
+        .pppp {
+            font-size: 1.1em;
+            font-weight: bold;
+            span {
+                font-size: 1.3em;
+            }
+        }
+        .blabla {
+            font-size: 1em;
+            font-weight: 550;
         }
     }
     .chkPerson {
