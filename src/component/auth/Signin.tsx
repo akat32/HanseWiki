@@ -14,11 +14,20 @@ export const Signin = ()=> {
         setPW(event.target.value)
     }
     async function login () {
+        let url = api.url + 'passportin'
         let data = {
             id: id,
             passwd: passwd
         }
-
+        try {
+            let result = await axios.post(url, data);
+            window.location.href = '/'
+        }
+        catch ( e ) {
+            alert('아이디나 비밀번호가 틀렸습니다!');
+            setID('')
+            setPW('')
+        }
     }
     return (
         <div className = "signin">
