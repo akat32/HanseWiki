@@ -1,7 +1,8 @@
 .signup {
     .inputForm {
-        float: left;
+        float: left;    
         margin-top: 1.5em;
+        margin-right: 12em;
         input {
             padding-left: 0.7em;
             height: 2.2em;
@@ -29,9 +30,50 @@
         }
     }
     .precautions {
+        float: left;
         margin-top: 3em;
-        width: 40em;
-        height: 26em;
-        margin-left: 20%;
+        .Admin, .user, .write{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 5em;
+            height: 5em;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            padding-left: 10em;
+        }
+        .Admin {
+            background-image: url('../../assets/admin-with-cogwheels.png');
+        }
+        .user {
+            width: 4.5em;
+            height: 4.5em;
+            background-image: url('../../assets/usergray.png');
+        }
+        .write {
+            width: 4.7em;
+            height: 4.7em;
+            background-image: url('../../assets/writing.png');
+        }
+        .pp {
+            opacity: 0.6;
+            line-height: 2.4em;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: center;
+            span {
+                font-size: 1.3em;
+            }
+        }
+        .ppp {
+            opacity: 0.6;
+            text-align: center;
+        }
+    }
+    .chkPerson {
+        input {
+            width: 23em;
+            height: 2em;
+            font-size: 1em;
+        }
     }
 }
