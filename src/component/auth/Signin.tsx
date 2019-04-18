@@ -31,7 +31,7 @@ export const Signin = ()=> {
             // window.location.href = '/'
             result = await axios.get(api.url + 'isauth')
             console.log(result)
-            alert('에헤')
+            alert('헤헤')
         }
         catch ( e ) {
             alert('아이디나 비밀번호가 틀렸습니다!');
