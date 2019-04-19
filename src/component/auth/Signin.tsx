@@ -3,7 +3,11 @@ import React, { Component, useState, useEffect } from 'react'
 import api from '../../api.json'
 import './Signin.scss'
 
+import fetch from 'node-fetch'
+
 import axios from 'axios'
+import { string } from 'prop-types';
+
 export const Signin = ()=> {
     const [id, setID] = useState()
     const [passwd, setPW] = useState()
@@ -17,6 +21,14 @@ export const Signin = ()=> {
     function writePW (event:any) {
         setPW(event.target.value)
     }
+    const loginFetch = async (url: string, obj: Object): Promise<any> => {
+        return new Promise(resolve => {
+            fetch(url, obj)
+            .then(body => {
+                resolve(body);
+            })
+        })
+    }
     async function login () {
         let url = api.url + 'passportin'
         let data = {
@@ -25,8 +37,16 @@ export const Signin = ()=> {
         }
         try {
             console.log(id, passwd)
-            let result = await axios.post(url, data);
-            console.log(result.data.user)
+            let obj = {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }
+            let result = await loginFetch(url, obj)
+            console.log(result)
             alert('success')
             // window.location.href = '/'
             result = await axios.get(api.url + 'isauth')
@@ -44,7 +64,7 @@ export const Signin = ()=> {
             <div className = "inputForm">
                 <p>사용자 ID</p>
                 <input type="text" placeholder="사용자 ID를 입력하세요" onChange = {writeID}/>
-                <p>사용자 ID</p>
+                <p>비밀번호</p>
                 <input type="password" placeholder="비밀번호를 입력하세요" onChange = {writePW} onKeyDown = {enterChk}/><br/>
                 <button className = "accept" onClick={login}>로그인</button>
             </div>
